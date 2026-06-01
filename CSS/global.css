@@ -1,0 +1,185 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   CSS RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root{
+
+    /* Backgrounds */
+    --bg-main:#050816;
+    --bg-card:#111827;
+
+    /* Brand */
+    --primary:#6366f1;
+    --primary-dark:#4f46e5;
+
+    --accent:#22d3ee;
+
+    /* Text */
+    --white:#ffffff;
+    --text-light:#cbd5e1;
+    --text-muted:#94a3b8;
+
+    /* Borders */
+    --border:rgba(255,255,255,0.1);
+
+    /* Effects */
+    --shadow:0 10px 30px rgba(0,0,0,0.3);
+
+    /* Radius */
+    --radius:20px;
+
+    /* Transition */
+    --transition:0.3s ease;
+}
+
+/* =========================
+   BASE
+========================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg-main);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    line-height:1.1;
+}
+
+p{
+    color:var(--text-light);
+    line-height:1.6;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select{
+    border:none;
+    outline:none;
+    font-family:inherit;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul,
+ol{
+    list-style:none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    background:var(--bg-card);
+    border-radius:var(--radius);
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.fade-in{
+    animation:fadeIn .5s ease;
+}
+
+.text-muted{
+    color:var(--text-muted);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

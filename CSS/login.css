@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid var(--border);
+}
+
+.LoginCard{
+    width: min(600px,90%);
+    background-color:var(--bg-card) ;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: var(--radius);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:8px;
+}
+.heading{
+    text-align: center;
+}
+input{
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--bg-main);
+    color: var(--white);
+    border: 1px solid var(--border)
+}
+input:focus{
+     border-color:var(--primary); 
+}
+
+#Error{
+    color:#ef4444;
+    min-height:20px;
+}
+a{
+    margin: 10px;
+    color: var(--accent);
+}
+button{
+    color: var(--white);
+    font-weight: 600;
+    padding: 6px 25px ;
+    border-radius: 8px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button:hover{
+ transform: scale(1.2) translateY(-2px);;
+ 
+}
+button:active{
+    transform: translateY(2px);
+}
