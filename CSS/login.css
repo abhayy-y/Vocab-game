@@ -63,13 +63,18 @@ a{
     margin: 10px;
     color: var(--accent);
 }
-button{
+#LoginBtn{
     color: var(--white);
     font-weight: 600;
     padding: 6px 25px ;
     border-radius: 8px;
     background-color: var(--primary);
     transition: var(--transition);
+}
+.LoginBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #LoginBtn:hover{
@@ -82,4 +87,14 @@ button{
 .passwordBox{
     display: flex;
     flex-direction: column;
+    gap: 8px;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: small;
 }
