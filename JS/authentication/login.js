@@ -5,6 +5,7 @@ const passwordRegex = /^.{8,}$/;
 const username = document.querySelector("#username");
 const LoginBtn = document.querySelector("#LoginBtn");
 const error = document.querySelector("#Error");
+const form = document.querySelector("form");
 // change the images of togglepassword later
 // password toggler
 img.addEventListener("click", (e) => {
@@ -19,15 +20,26 @@ img.addEventListener("click", (e) => {
 });
 
 // Error message for username and password
-LoginBtn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!usernameRegex.test(username.value)) {
     error.innerText =
       "Username: 3-20 characters, letters, numbers, and _ only.";
-  }
+    return
+}
    else if (!passwordRegex.test(password.value)) {
     error.innerText = "Password must be at least 8 characters long.";
-  }
+  return
+}
   password.value = ""
   username.value= ""
+});
+// clearing the error when user types
+
+username.addEventListener("input", () => {
+  error.innerText = "";
+});
+
+password.addEventListener("input", () => {
+  error.innerText = "";
 });
