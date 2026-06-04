@@ -1,24 +1,40 @@
 const password = document.querySelector("#password");
-const eye = document.querySelector("#eye");
+const passwordConfirm = document.querySelector("#passwordConfirm");
+const eye1 = document.querySelector("#eye1");
+const eye2 = document.querySelector("#eye2");
 const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
 const passwordRegex = /^.{8,}$/;
 const username = document.querySelector("#username");
 const error = document.querySelector("#Error");
 const form = document.querySelector("form");
+
+
 // change the images of togglepassword later
 // password toggler
-eye.addEventListener("click", (e) => {
+
+eye1.addEventListener("click", (e) => {
   e.preventDefault();
   if (password.type === "password") {
     password.type = "text";
-    img.src = "./assets/icons/eye-open.png";
+    eye1.src = "./assets/icons/eye-open.png";
   } else {
     password.type = "password";
-    img.src = "./assets/icons/hidden.png";
+    eye1.src = "./assets/icons/hidden.png";
   }
 });
 
-// Error message for username and password
+eye2.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (passwordConfirm.type === "password") {
+    passwordConfirm.type = "text";
+    eye2.src = "./assets/icons/eye-open.png";
+  } else {
+    passwordConfirm.type = "password";
+    eye2.src = "./assets/icons/hidden.png";
+  }
+});
+
+// Error message for username and password 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!usernameRegex.test(username.value)) {
@@ -30,9 +46,15 @@ form.addEventListener("submit", (e) => {
     error.innerText = "Password must be at least 8 characters long.";
   return
 }
-  password.value = "";
-  username.value= "";
+else if(password.value !== passwordConfirm.value){
+error.innerText = "Please make sure both passwords are the same.";
+    return
+}
+  password.value = ""
+  username.value= ""
+  passwordConfirm.value = "";
    window.location.href = "dashboard.html";
+
 });
 // clearing the error when user types
 
@@ -43,3 +65,6 @@ username.addEventListener("input", () => {
 password.addEventListener("input", () => {
   error.innerText = "";
 });
+passwordConfirm.addEventListener("input",()=>{
+    error.innerText = "";
+})

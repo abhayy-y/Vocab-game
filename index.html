@@ -5,36 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vocab Runner</title>
     <link rel="stylesheet" href="./CSS/global.css" />
-    <link rel="stylesheet" href="./CSS/login.css" />
+    <link rel="stylesheet" href="./CSS/auth.css" />
     <script src="./JS/authentication/login.js" defer></script>
   </head>
   <body>
     <div class="LoginCard">
       <form action="">
-       <div class="heading">
-         <h1>Welcome Back</h1>
-        <p class="subtitle">Login to continue your journey</p>
-       </div>
+        <!--Heading-->
+
+        <div class="heading">
+          <h1>Welcome Back</h1>
+          <p class="subtitle">Login to continue your journey</p>
+        </div>
+        <!--Username-->
 
         <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter Your Username" />
+        <input type="text" 
+        required
+        autocomplete="username"
+        id="username" placeholder="Enter Your Username" />
+        <!--Password-->
 
-     <div class="passwordBox">
-         <label for="password">Password</label>
-      <div class="box">  <input
-          type="password"
-          name=""
-          id="password"
-          placeholder="Enter Password"
-        />
-        <img src="./assets/icons/hidden.png"  alt="eye">
-      </div>
-     </div>
-       <div class="message">
-         <p id="Error"></p>
-        <a href="signUp.html">Don't have a account? Create one</a>
-       </div>
-        <div class="LoginBox"><button id="LoginBtn" type="submit">Login</button></div>
+        <div class="passwordBox">
+          <label for="password">Password</label>
+          <div class="box">
+            <input
+            autocomplete="current-password"
+            required
+              type="password"
+              name=""
+              id="password"
+              placeholder="Enter Password"
+            />
+            <img id="eye" src="./assets/icons/hidden.png" alt="Toggle password visibility" />
+          </div>
+        </div>
+        <!--Error message & link to sign Up page-->
+
+        <div class="message">
+          <p id="Error"></p>
+          <a href="signUp.html">Don't have a account? Create one</a>
+        </div>
+        <!-- Login button for getting access to the account-->
+
+        <div class="LoginBox">
+          <button id="LoginBtn" type="submit">Log In</button>
+        </div>
       </form>
     </div>
   </body>

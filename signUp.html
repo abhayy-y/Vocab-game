@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocab Runner</title>
+    <link rel="stylesheet" href="./CSS/global.css" />
+    <link rel="stylesheet" href="./CSS/auth.css" />
+    <script src="./JS/authentication/signUp.js" defer></script>
+  </head>
+  <body>
+    <div class="LoginCard">
+      <form action="">
+        <!-- Heading -->
+   <div class="heading">
+    <h1>Create Account</h1>
+    <p class="subtitle">Sign up to start your journey</p>
+</div>
+<!--Username-->
+        <label for="username">Username</label>
+        <input type="text" 
+        required
+        autocomplete="username"
+        id="username" placeholder="Enter Your Username" />
+<!--Password-->
+     <div class="passwordBox">
+         <label for="password">Password</label>
+      <div class="box">  <input
+        required
+        autocomplete="new-password" 
+        type="password"
+          name=""
+          id="password"
+          placeholder="Enter Password"
+        />
+        <img id="eye1" src="./assets/icons/hidden.png"  alt="Toggle password visibility">
+      </div>
+     </div>
+     <!--Password confirmation-->
+      <div class="passwordBox">
+         <label for="passwordConfirm">Confirm Password</label>
+      <div class="box">  <input
+         required
+        autocomplete="new-password"   
+        type="password"
+          name=""
+          id="passwordConfirm"
+          placeholder="Enter your Password again"
+        />
+        <img id="eye2" src="./assets/icons/hidden.png"  alt="Toggle password visibility">
+      </div>
+     </div>
+     <!--Error message & back to login page-->
+       <div class="message">
+         <p id="Error"></p>
+        <a href="index.html">Already have an account?Log In</a>
+       </div>
+       <!--Sign Up button for form submission-->
+        <div class="signUpBox"><button id="signUpBtn" type="submit">Sign Up</button></div>
+      </form>
+    </div>
+  </body>
+</html>

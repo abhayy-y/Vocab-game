@@ -2,7 +2,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid var(--border);
 }
 
 .LoginCard{
@@ -47,16 +46,19 @@ form{
     cursor: pointer;
 }
 
-#password{
+#password,#passwordConfirm{
     width: 100%;
     background-color: inherit;
     color:inherit;
     padding: 12px;
+    border-radius: var(--radius);
+}
+.box:focus-within,#username:focus-within{
+    border-color: var(--primary);
 }
 input:focus{
-     border-color:var(--primary); 
+    outline: none;
 }
-
 #Error{
     color:#ef4444;
     min-height:20px;
@@ -65,7 +67,7 @@ a{
     margin: 10px;
     color: var(--accent);
 }
-#LoginBtn{
+#LoginBtn,#signUpBtn{
     color: var(--white);
     font-weight: 600;
     padding: 6px 25px ;
@@ -73,23 +75,24 @@ a{
     background-color: var(--primary);
     transition: var(--transition);
 }
-.LoginBox{
+.LoginBox,.signUpBox{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#LoginBtn:hover{
- transform: scale(1.2) translateY(-2px);;
+#LoginBtn:hover,#signUpBtn:hover{
+ transform: scale(1.05) translateY(-2px);;
  
 }
-#LoginBtn:active{
+#LoginBtn:active,#signUpBtn:active{
     transform: translateY(2px);
 }
 .passwordBox{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
 }
 .message{
     display: flex;
